@@ -2,17 +2,20 @@
   <a-form :form="form" @submit="handleSubmit">
     <a-form-item :validate-status="userNameError() ? 'error' : ''" :help="userNameError() || ''">
       <a-input
+        size="large"
         v-decorator="[
           'userName',
           { rules: [{ required: true, message: 'Please input your username!' }] },
         ]"
         placeholder="Username"
+        
       >
         <a-icon slot="prefix" type="user" style="color:rgba(0,0,0,.25)" />
       </a-input>
     </a-form-item>
     <a-form-item :validate-status="passwordError() ? 'error' : ''" :help="passwordError() || ''">
-      <a-input
+      <a-input-password
+        size="large"
         v-decorator="[
           'password',
           { rules: [{ required: true, message: 'Please input your Password!' }] },
@@ -21,7 +24,7 @@
         placeholder="Password"
       >
         <a-icon slot="prefix" type="lock" style="color:rgba(0,0,0,.25)" />
-      </a-input>
+      </a-input-password>
     </a-form-item>
     <a-form-item>
       <a-button type="primary" html-type="submit" :disabled="hasErrors(form.getFieldsError())">
@@ -61,6 +64,7 @@ export default {
     },
     handleSubmit(e) {
       e.preventDefault();
+      window.location.href="/home"
       this.form.validateFields((err, values) => {
         if (!err) {
           console.log('Received values of form: ', values);

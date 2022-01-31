@@ -1,7 +1,6 @@
 <template>
   <a-row type="flex" justify="space-around" align="middle" style="margin-top: 200px;">
       <a-col :span="8">
-        <NavigationBar />
         <LoginForm />
       </a-col>
   </a-row>
