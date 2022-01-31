@@ -3,7 +3,7 @@
     type="flex"
     justify="space-around"
     align="middle"
-    style="margin-top: 200px">
+    style="margin-top: 50px">
     <a-col :span="8">
       <div class="justify-content-around d-flex">
         <img src="~/assets/logo-blue.png" style="width: 130px" class="m-3" />
