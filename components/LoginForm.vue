@@ -1,5 +1,6 @@
 <template>
-  <a-form :form="form" @submit="handleSubmit">
+  <div>
+    <a-form :form="form" @submit="handleSubmit">
     <a-form-item :validate-status="userNameError() ? 'error' : ''" :help="userNameError() || ''">
       <a-input
         size="large"
@@ -26,12 +27,16 @@
         <a-icon slot="prefix" type="lock" style="color:rgba(0,0,0,.25)" />
       </a-input-password>
     </a-form-item>
+    <a-button type="link">Forgot Password?</a-button>
     <a-form-item>
-      <a-button type="primary" html-type="submit" :disabled="hasErrors(form.getFieldsError())">
+      <a-button type="primary ms-3" html-type="submit" :disabled="hasErrors(form.getFieldsError())">
         Log in
       </a-button>
     </a-form-item>
+
   </a-form>
+
+  </div>
 </template>
 
 <script>

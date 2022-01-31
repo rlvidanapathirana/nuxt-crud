@@ -20,7 +20,7 @@
           </NuxtLink>
 
           <NuxtLink class="nav-link-custom mx-2" to="/">
-            <i class="bi bi-person-plus-fill m-2"></i>
+            <i class="bi bi-box-arrow-right"></i>
             <span>Log Out</span>
           </NuxtLink>
         </div>
