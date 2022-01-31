@@ -12,7 +12,7 @@
           <br />
           <br />
           <button class="btn btn-outline-primary" type="button">
-            Upload New Image
+            Upload Image
           </button>
           <div class="small font-italic text-muted mb-4">
             .JPG or .PNG no larger than 10 MB
